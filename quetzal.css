@@ -1,0 +1,666 @@
+
+:root{
+    /*colores*/
+    --color-fondo: #0f1f0f;
+    --color-texto: #f0ede6;
+    --color_auxiliar:#c8a951;
+    --color-nav: rgba(237,231,220,0.50);
+
+
+/* tipografias*/
+    --texto-titulo: "Cormorant Garamond", serif;
+    --texto-normal: "Inter", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--color-fondo);
+    color:var(--color-texto);
+    font-family: var(--texto-normal);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+ h1, h2 ,h3{
+    font-family: var(--texto-titulo);
+    
+}
+
+.barra_nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    /*para desnefocar*/
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+
+    transition: transform, background-color  0.5s ease;
+
+}
+.nav_oculto{
+    transform: translateY(-100%);
+}
+.nav_visible{
+    background-color: var(--color-nav);
+    backdrop-filter: blur(12px);
+    
+}
+
+.logo{
+    width: 230px;
+    margin-left: 40px;
+}
+.menu_nav{
+    top: 0px;
+    right: 0px;
+    position: fixed;
+    height: 100vh;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 7%; 
+    background-color: #0f1f0f;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform .5s ease-out;
+
+
+}
+.menu_visible{
+    transform: translateX(0);
+}
+.btn_nav_cerrado{
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--color-texto);
+    font-size: 2rem;
+}
+.btn_nav_cerrado:hover{
+    color: #b97a56;
+}
+
+
+.btn_nav{
+   margin-right: 40px;
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+   font-size: 2rem;
+}
+.btn_nav:hover{
+    color: #b97a56;
+}
+.btn_color_nav{
+    color: antiquewhite;
+}
+.item-nav{
+    text-decoration: none;
+    font-family: var(--texto-titulo);
+    color: var(--color-texto);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 100;
+}
+.item-nav:hover{
+    color: #b97a56;
+}
+
+.nav_menu_abierto{
+    opacity: 0;
+    pointer-events: none;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: rgba(0,0,0,.60);
+    opacity: 0;
+    width: 100%;
+    z-index: 900;
+    transition: opacity .3s ease;
+    pointer-events: none;
+}
+.overlay_visible{
+    opacity: 1;
+    pointer-events: auto;
+    
+}
+.contenido{
+    transform: translateX(0px);
+    transition: transform .4s ease;
+}
+.contenido_menu_abierto{
+    transform: translateX(-50px);
+}
+.hero{
+    background-image: url(hero2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.hero_conte{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(0, 0, 0,.70);
+    padding: 30px;
+    margin-bottom: 60px;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    gap: 15px;
+}
+.btn_hero{
+    padding: 15px 28px;
+    margin-left: 10px;
+    background-color: transparent;
+    border: solid 2px white;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.btn_hero:hover{
+    background-color: white;
+    color: black;
+}
+.hero_conte h1{
+    max-width: fit-content;
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 700;
+
+}
+.hero_conte p{
+    font-size: 20px;
+    max-width: fit-content;
+    line-height: 1.7;
+}
+.propuesta{
+    margin:60px 0;
+    position:relative;
+    
+}
+.redes_propuesta{
+    position:absolute;
+    top: -45px;
+    right: 20px;
+    display: flex;
+    gap:15px;
+}
+.redes_propuesta a{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.redes_propuesta img{
+    width: 40px;
+    height: 40px;
+}
+.redes_propuesta img:hover{
+    transform: scale(1.2);
+}
+
+.propuesta_aimg{
+    width: 40%;
+    overflow: hidden;
+    border: solid 2px black;
+    border-radius: 10px;
+}
+.propuesta_conte{
+    width: 40%;
+}
+.img_propuesta{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.propuesta_aimg:hover .img_propuesta{
+    transform: scale(1.05);
+}
+
+.fondo_propuesta{
+    background: linear-gradient(
+        to right,
+        transparent 40%,
+        #162e16 60%
+    );
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    
+}
+.propuesta_conte{
+    width: 30%;
+}
+.propuesta_conte h2{
+    font-size: 35px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--color_auxiliar);
+    width: fit-content;
+    font-weight:600;
+    padding-bottom: 20px
+}
+.propuesta_conte p{
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: justify;
+    font-weight: 200;
+}
+.titulo_de_manu{
+    font-size: 35px;
+    border-bottom: 2px solid var(--color_auxiliar);
+    width: fit-content;
+    font-weight: 700;
+    margin-left: 60px;
+
+}
+.lista_menu{
+    display: flex;
+    gap:60px;
+    list-style: none;
+    flex-direction: column;
+}
+
+.item_list article{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    gap:60px;
+
+}
+.fondo_izquierda_menu{
+    background:linear-gradient(to right, #5F7A5F  40%,transparent 60%);
+}
+.fondo_derecha_menu{
+    background:linear-gradient(to right, transparent  40%,#5F7A5F 60%);
+}
+.img_menu{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.lista_img_conte{
+    width: 40%;
+    overflow: hidden;
+    border: 2px solid black;
+    border-radius:5px;
+}
+.lista_img_conte:hover .img_menu{
+    transform: scale(1.05);
+}
+.texto_menu{
+    width: 30%;
+
+}
+.texto_menu h3{
+    font-size: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--color-auxiliar);
+    width: fit-content;
+}
+.texto_menu p{
+    font-size: 18px;
+    line-height:1.2;
+    text-align: justify;
+    font-weight:200;
+    padding-bottom: 20px;
+}
+.precio{
+    color: var(--color_auxiliar);
+    font-size: 20px;
+    font-weight: 800;
+} 
+
+.fondo_derecha_bebidas{
+    background:linear-gradient(to right, transparent  40%, #2d302c 60%);
+}
+.fondo_izquierda_bebidas{
+    background:linear-gradient(to right, #2d302c 40%, transparent 60%);
+}
+.titulo_bebidas{
+    
+    margin: 60px 60px;
+}
+
+.fondo_derecha_vinos{
+    background:linear-gradient(to right, transparent  40%, #332a25 60%);
+}
+.fondo_izquierda_vinos{
+    background:linear-gradient(to right, #332a25 40%, transparent 60%);
+}
+
+.fondo_izquierda_artesanal{
+    background:linear-gradient(to right, #2d402d 40%, transparent 60%);
+}
+.fondo_derecha_artesanal{
+    background:linear-gradient(to right, transparent 40%, #2d402d 60%);
+}
+
+
+.reserbaciones{
+    margin: 60px 0;
+}
+.form_reserva{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-top: 40px;
+}
+.reserbaciones h2{
+    font-size: 35px;
+    border-bottom: 2px solid var(--color_auxiliar);
+    width: fit-content;
+    font-weight: 700;
+    margin-left: 60px;
+}
+
+.reserva_barra{
+
+    display:flex;
+    background:#f4efe6;
+    border-radius:70px;
+    overflow:hidden;
+    width:700px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+
+}
+.campo_reserva{
+
+    flex:1;
+    padding:22px 30px;
+    cursor:pointer;
+    transition:.3s;
+    height: auto;
+    border-color: transparent;
+    
+}
+.campo_reserva:hover{
+    
+    background:#f1e6d2;
+    border-radius: 70px;
+    border: 1px solid var(--color_auxiliar);
+}
+
+
+.persona{
+    display: flex;
+    flex-direction: column;
+}
+.persona label{
+    padding-bottom: 10px;
+}
+.obserbaciones{
+    display: flex;
+    flex-direction: column;
+}
+.obserbaciones label{
+    padding-bottom: 10px;
+}
+.btn_reserva{
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 40px;
+    width: auto;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--texto-normal);
+    background-color: transparent;
+}
+.btn_reserva:hover{
+    background-color: white;
+    color: black;
+    cursor:pointer;
+}
+#nombre{
+    padding: 10px;
+    border-radius: 10px;
+    border:none;
+}
+#obserbacion{
+    padding: 10px;
+    border-radius: 10px;
+    border:none;
+}
+#campo_hora option{
+    border: none;
+    background-color: white;
+}
+
+
+
+.historia{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    padding: 60px 0;
+    
+}
+
+
+.img_historia{
+    width: 100%;
+    overflow: hidden;
+    height: 450px;
+}
+.img_historia img{
+    transform: scale(1);
+    transition: transform .5s ease;
+    
+}
+.img_historia:hover img{
+    transform: scale(1.1);
+}
+
+.cont_historia{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont_historia h2{
+    font-size: 35px;
+    border-bottom: 2px solid var(--color_auxiliar);
+    width: fit-content;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.cont_historia p{
+    width: 80%;
+    font-size: 19px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #0B1610;
+    padding: 20px 60px;
+    gap: 20px;
+    border-top: 2px solid var(--color_auxiliar);
+}
+.footer_conte{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    
+}
+
+.contactanos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex:1;
+}
+.contactanos a{
+    text-decoration: none;
+    color: var(--color-texto);
+}
+.contactanos a:hover{
+    color: var(--color_auxiliar);
+}
+
+.horarios{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex:1;
+}
+.redes{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex:1;
+}
+.redes a{
+    text-decoration: none;
+    color: var(--color-texto);
+}
+.redes a:hover{
+    color: var(--color_auxiliar);
+}
+
+.legal{
+    border-top: 2px solid var(--color_auxiliar);
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+
+}
+
+
+
+@media (max-width: 600px) {
+
+    body{
+        padding: 0px 0px;
+    }
+    
+    .menu_nav{
+        width: 100%;
+    }
+    .fondo_propuesta{
+        flex-direction: column;
+        gap: 20px;
+        background-color:#0f1f0f;
+    }
+    .propuesta_aimg{
+        width: 80%;
+    }
+    .propuesta_conte{
+        width: 80%;
+    }
+    .item_list article{
+        flex-direction: column;
+    }
+    .texto_menu{
+        width: 80%;
+    }
+    .lista_img_conte{
+        width: 80%;
+    }
+    .fondo_izquierda_menu{
+        background-color:#5F7A5F;
+        padding-bottom:20px;
+        padding-top:20px;
+
+    }
+    .fondo_derecha_menu{
+        background-color:#5F7A5F;
+        padding-bottom:20px;
+        padding-top:20px;
+    }
+    .fondo_derecha_bebidas{
+        background-color:#2d302c;
+        padding-bottom:20px;
+        padding-top:20px;
+    }
+    .fondo_izquierda_bebidas{
+        background-color:#2d302c;
+        padding-bottom:20px;
+        padding-top:20px;
+    }
+    .fondo_derecha_vinos{
+        background-color:#332a25;
+        padding-bottom:20px;
+        padding-top:20px;
+    }
+    .fondo_izquierda_vinos{
+        background-color:#332a25;
+        padding-bottom:20px;
+        padding-top:20px;
+    }
+    .fondo_derecha_artesanal{
+        background-color:#2d402d;
+        padding-bottom:20px;
+        padding-top:20px;
+    }
+
+    .fondo_izquierda_artesanal{
+        background-color:#2d402d;
+        padding-bottom:20px;
+        padding-top:20px;
+    }
+    .reserva_barra{
+        width: 80%;
+    }
+    .persona{
+        width: 80%;
+    }
+    .obserbaciones{
+        width: 80%
+    }
+    .reserbaciones h2{
+        font-size: 35px;
+        margin-left: 20px;
+    }
+    .footer_conte{
+        flex-direction: column;
+    }
+
+}

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quetzal Andino</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="quetzal.css">
+</head>
+<body>
+    <nav class="barra_nav" id="barra_nav"> 
+        <img src="logo.png" alt="Logo_pagina" class="logo">
+        <button id="btn_nav" class="btn_nav">☰</button>
+    </nav>
+    <ul id="menu_nav" class="menu_nav">
+            <button id="btn_nav_cerrado" class="btn_nav_cerrado">✕</button>
+            <li><a href="#reserbaciones" class="item-nav">Reservaciones</a></li>
+            <li><a href="#menu_produ" class="item-nav">Carta de comidas</a></li>
+            <li><a href="#menu_bebidas" class="item-nav">Carta de bebidas</a></li>
+            <li><a href="#historia" class="item-nav">Sobre nosotros</a></li>
+            <li><a href="#contactanos"class="item-nav">Contactanos</a></li>
+        </ul>
+    <div id="contenido" class="contenido">
+    
+        <section id="hero" class="hero">
+            <!--aqui agregar imagen para el hero con css-->
+            <div class="hero_conte">
+                <h1>Donde la tradición se encuentra con la vanguardia</h1>
+                <p>Una reinterpretación contemporánea de los sabores de los Andes</p>
+                <a href="#reserbaciones" class="btn_hero">Reservar una mesa</a>
+            </div>
+        </section>
+
+        <section id="propuesta" class="propuesta">
+            <div class="redes_propuesta">
+                <a href="#"><img src="instagram.png" alt="logo de instagram"></a>
+                <a href=""><img src="x.png" alt="logo de X"></a>
+                <a href="#"><img src="youtube.png" alt="logo de youtube"></a>
+            </div>
+            <div class="fondo_propuesta">
+                <div id="propuesta_img" class="propuesta_aimg">
+                    <img src="propuesta.png" alt="img_propuesta" class="img_propuesta">
+                </div>
+                <div id="propuesta_conte" class="propuesta_conte">
+                    <h2>Sabores que Narran el Territorio</h2>
+                    <p>En Quetzal Andino, la cocina no es solo un acto de preparar alimentos; es un ejercicio de memoria y exploración. Tomamos la generosidad de nuestras montañas y la traducimos a un lenguaje contemporáneo, donde cada ingrediente respeta su origen pero desafía la forma en que lo percibimos. <br>
+                        <br>
+                         Aquí, los <strong>saberes ancestrales</strong> de nuestros abuelos se encuentran con la precisión técnica de la vanguardia, creando una atmósfera donde la elegancia de lo moderno convive en armonía con la pureza de lo natural.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu_produ" class="menu_produ">
+
+            <ul class="lista_menu" id="lista_menu">
+                <h2 class="titulo_de_manu">Nuestra Propuesta Gastronómica</h2>
+                <li class="item_list">
+                    <article class="fondo_izquierda_menu">
+
+                        <div class="texto_menu">
+                            <h3>El despertar de la montaña</h3>
+                            <p>Tartar de trucha arcoíris (del embalse de Tominé o similar) curada en sal de café y esencia de aguacate, sobre una emulsión de ají dulce andino.</p>
+                            <span class="precio">$32.000</span>
+                        </div>
+                        <div class="lista_img_conte">
+                            <img src="El despertar de la montaña.png" alt="platillo trucha arcoiris" class="img_menu">
+                        </div>
+                    </article>
+                </li>
+
+                <li class="item_list">
+                    <article class="fondo_derecha_menu">
+                        <div class="lista_img_conte">
+                            <img src="Bosque de niebla.png" alt="Pecho de res braseado" class="img_menu">
+                        </div>
+                        <div class="texto_menu">
+                            <h3>Bosque de niebla</h3>
+                            <p>Pecho de res braseado por 24 horas en reducción de panela y especias de la tierra, servido con puré de arracacha ahumada y chips de tubérculos nativos.</p>
+                            <span class="precio">$68.000</span>
+                        </div>
+                    </article>
+                </li>
+
+                <li class="item_list">
+                    <article class="fondo_izquierda_menu">
+
+                        <div class="texto_menu">
+                            <h3>Cosecha andina</h3>
+                            <p>Risotto de quinua real y setas silvestres, terminado con aceite de hierbas frescas de páramo y pétalos de flores comestibles.</p>
+                            <span class="precio">$48.000</span>
+                        </div>
+                        <div class="lista_img_conte">
+                            <img src="Cosecha andina.png" alt="Risotto de quinua real" class="img_menu">
+                        </div>
+                    </article>
+                </li>
+
+                <li class="item_list">
+                    <article class="fondo_derecha_menu">
+                        <div class="lista_img_conte">
+                            <img src="Cielo de la cordillera.png" alt="Esfera de chocolate orgánico colombiano" class="img_menu">
+                        </div>
+
+                        <div class="texto_menu">
+                            <h3>Cielo de la cordillera</h3>
+                            <p>Esfera de chocolate orgánico colombiano rellena de mousse de uchuva y crumble de café tostado.</p>
+                            <span class="precio">$24.000</span>
+                        </div>
+                    </article>
+                </li>
+
+                <li class="item_list">
+                    <article class="fondo_izquierda_menu">
+
+                        <div class="texto_menu">
+                            <h3>Origen de Tierra Fría</h3>
+                            <p>Crema aterciopelada de habas y arvejas frescas, con un toque de queso campesino ahumado al romero y gotas de aceite de cilantro de monte.</p>
+                            <span class="precio">$28.000</span>
+                        </div>
+                        <div class="lista_img_conte">
+                            <img src="Origen de Tierra Fría.png" alt="Crema aterciopelada de habas y arvejas" class="img_menu">
+                        </div>
+                    </article>
+                </li>
+
+                <li class="item_list">
+                    <article class="fondo_derecha_menu">
+                        <div class="lista_img_conte">
+                            <img src="Pescado del Atrato.png" alt="Filete de pescado de río a la plancha" class="img_menu">
+                        </div>
+
+                        <div class="texto_menu">
+                            <h3>Pescado del Atrato</h3>
+                            <p>Filete de pescado de río a la plancha, sellado en mantequilla de manteca de cacao, servido con un puré de plátano maduro caramelizado y hogao de tomate chonto en reducción de cítricos.</p>
+                            <span class="precio">$62.000</span>
+                        </div>
+                    </article>
+                </li>
+
+                <li class="item_list">
+                    <article class="fondo_izquierda_menu">
+
+                        <div class="texto_menu">
+                            <h3>Caza de Páramo</h3>
+                            <p>Lomo de cerdo marinado en chicha de maíz fermentada, acompañado de un cremoso de mote y emulsión de mora silvestre.</p>
+                            <span class="precio">$65.000</span>
+                        </div>
+                        <div class="lista_img_conte">
+                            <img src="Caza de Páramo.png" alt="Lomo de cerdo marinado" class="img_menu">
+                        </div>
+                    </article>
+                </li>
+
+                <li class="item_list">
+                    <article class="fondo_derecha_menu">
+                        <div class="lista_img_conte">
+                            <img src="Frutos de la Selva Alta.png" alt="Mousse ligero de lulo sobre una base de tierra de cacao" class="img_menu">
+                        </div>
+
+                        <div class="texto_menu">
+                            <h3>Frutos de la Selva Alta</h3>
+                            <p>Mousse ligero de lulo sobre una base de tierra de cacao 70%, decorado con un cristal de azúcar al aroma de hierbabuena.</p>
+                            <span class="precio">$22.000</span>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </section>
+
+        <section id="menu_bebidas"  class="menu_bebidas">
+            <h2 class="titulo_de_manu titulo_bebidas">Nuestra Bodega y Coctelería</h2>
+
+            <div class="cocteles">
+                <ul class="lista_menu">
+                    <li class="item_list">
+                        <article class="fondo_izquierda_bebidas">
+
+                            <div class="texto_menu">
+                                <h3>Bruma sobre el Valle</h3>
+                                <p>Gin infusionado con eucalipto, esencia de lulo, tónica artesanal y un toque de cardamomo.</p>
+                            </div>
+                            <div class="lista_img_conte">
+                                <img src="Bruma sobre el Valle.png" alt="Gin infusionado con eucalipto" class="img_menu">
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="item_list">
+                        <article class="fondo_derecha_bebidas">
+                            <div class="lista_img_conte">
+                                <img src="Pasión de Altura.png" alt="Destilado de caña" class="img_menu">
+                            </div>
+                            <div class="texto_menu">
+                                <h3>Pasión de Altura</h3>
+                                <p>Destilado de caña, reducción de uchuva fresca, gotas de ají amarillo y una espuma de clara de huevo y limón.</p>
+                            </div>
+
+                        </article>
+                    </li>
+
+                    <li class="item_list">
+                        <article class="fondo_izquierda_bebidas">
+
+                            <div class="texto_menu">
+                                <h3>Fuego en la Cosecha</h3>
+                                <p>Whisky ahumado, jarabe de panela quemada, bitter de cacao colombiano y una cáscara de naranja quemada al momento.</p>
+                            </div>
+                            <div class="lista_img_conte">
+                                <img src="Fuego en la Cosecha.png" alt="Whisky ahumado" class="img_menu">
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="vinos">
+                <h2 class="titulo_de_manu titulo_bebidas">Nuestra propuesta de vinos</h2>
+
+                <ul class="lista_menu">
+                    <li class="item_list">
+                        <article class="fondo_derecha_vinos">
+                            <div class="lista_img_conte">
+                                <img src="Malbec reserva.png" alt="Malbec reserva" class="img_menu">
+                            </div>
+
+                            <div class="texto_menu">
+                                <h3>Tinto</h3>
+                                <p>Malbec reserva (notas a frutos negros y especias, ideal para el Bosque de Niebla).</p>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="item_list">
+                        <article class="fondo_izquierda_vinos">
+
+                            <div class="texto_menu">
+                                <h3>Blanco</h3>
+                                <p>Chardonnay joven (notas frutales, excelente para el Pescado del Atrato).</p>
+                            </div>
+                            <div class="lista_img_conte">
+                                <img src="Chardonnay joven.png" alt="Chardonnay joven" class="img_menu">
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="item_list">
+                        <article class="fondo_derecha_vinos">
+                            <div class="lista_img_conte">
+                                <img src="Cava Brut.png" alt="Cava Brut" class="img_menu">
+                            </div>
+
+                            <div class="texto_menu">
+                                <h3>Espumoso</h3>
+                                <p>Cava Brut (limpia el paladar entre cada bocado).</p>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="artesanal">
+                <h2 class="titulo_de_manu titulo_bebidas" >Nuestra Propuesta de Bebidas Artesanales</h2>
+
+                <ul class="lista_menu">
+                    <li class="item_list">
+                        <article class="fondo_izquierda_artesanal">
+                            <div class="texto_menu">
+                                <h3>La Chicha del Maestro</h3>
+                                <p>Fermentado de maíz ancestral, servido con una mínima reducción de miel de abejas nativas.</p>
+                            </div>
+                            <div class="lista_img_conte">
+                                <img src="Fermentado de maíz ancestral.png" alt="Fermentado de maíz ancestral" class="img_menu">
+                            </div>
+
+                        </article>
+                    </li>
+
+                    <li class="item_list">
+                        <article class="fondo_derecha_artesanal">
+                            <div class="lista_img_conte">
+                                <img src="Blend de hierbas de páramo.png" alt="Blend de hierbas de páramo" class="img_menu">
+                            </div>
+                            <div class="texto_menu">
+                                <h3>Infusión de Monte</h3>
+                                <p>Blend de hierbas de páramo (menta, toronjil y romero) recolectadas diariamente, servidas en prensa francesa.</p>
+                            </div>
+
+                        </article>
+                    </li>
+
+                    <li class="item_list">
+                        <article class="fondo_izquierda_artesanal">
+        
+                            <div class="texto_menu">
+                                <h3>Café de Origen (Geisha o Bourbon)</h3>
+                                <p>Preparado en método V60, resaltando notas a panela y frutos cítricos, con una ficha técnica que explique la altura y la finca de procedencia.</p>
+                            </div>
+                            <div class="lista_img_conte">
+                                <img src="Café de Origen.png" alt="Café de Origen" class="img_menu">
+                            </div>
+
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="reserbaciones" class="reserbaciones">
+
+            <h2>Reserve su mesa con nosotros</h2>
+
+            <form class="form_reserva">
+
+                <div class="reserva_barra">
+                    <select class="campo_reserva" id="campo_personas" >
+                        <option>1 Persona</option>
+                        <option>2 Personas</option>
+                        <option>3 Personas</option>
+                        <option>4 Personas</option>
+                        <option>5 Personas</option>
+                        <option>6 Personas</option>
+                    </select>
+                    
+                    <input type="date" class="campo_reserva" id="campo_fecha">
+            
+                    <select class="campo_reserva" id="campo_hora">
+                        <option>8:00 AM</option>
+                        <option>9:00 AM</option>
+                        <option>10:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>12:00 PM</option>
+                        <option>1:00 PM</option>
+                        <option>2:00 PM</option>
+                        <option>3:00 PM</option>
+                        <option>4:00 PM</option>
+                        <option>5:00 PM</option>
+                        <option>6:00 PM</option>
+                    </select>
+
+                </div>
+
+                
+                <div class="persona">
+                    <label for="nombre">Desea reserbar a nombre de:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre" required>
+                </div>
+
+                <div class="obserbaciones">
+                    <label for="obserbacion">Si desea avisar de alguna alergia, o alguna obserbacion extra escribala acontinuacion:</label>
+                    <textarea type="text"  id="obserbacion"  name="observaciones" placeholder="Escriba aqui su obserbacion.." ></textarea>
+
+                </div>
+
+                <button class="btn_reserva" type="submit">
+                    Reservar
+                </button>
+
+            </form>
+
+        </section>
+
+        <section id="historia" class="historia">
+            <div id="img_historia" class="img_historia">
+                <img src="sobre nosotros.png" alt="Equipo de cocina de Quetzal Andino preparando un plato en una mesa de madera rústica">
+            </div>
+            <div id="cont_historia" class="cont_historia">
+                <h2>Nuestra raíz: entre la tierra y la vanguardia</h2>
+                <p>Quetzal Andino nació de una obsesión: encontrar la elegancia en lo esencial. Nos inspiramos en la biodiversidad de nuestras cordilleras, donde cada ingrediente desde la arracacha de los valles boyacenses hasta los cítricos de las estribaciones selváticas cuenta una historia de siglos. Nuestro nombre no es azar; rinde homenaje a la libertad y a la belleza vibrante de los Andes, valores que decidimos llevar a la mesa.</p>
+                <p>Entendemos la cocina como un diálogo entre la memoria y el futuro. Respetamos los procesos ancestrales, como la fermentación en chicha o los braseados lentos, pero los elevamos con técnicas de alta cocina moderna. Aquí, el campo no solo se sirve, se transforma. Nuestro equipo busca constantemente el equilibrio perfecto donde el sabor crudo de la montaña se encuentra con la delicadeza de un emplatado de autor.</p>
+                <p>No buscamos solo alimentar, buscamos crear un paisaje sensorial. Cada visita a Quetzal Andino es una invitación a explorar nuestra geografía a través de texturas, aromas y una hospitalidad que se siente como en casa, pero se sirve con el rigor de un restaurante de mundo. Bienvenidos a nuestra mesa; bienvenidos a la esencia de los Andes.</p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer_conte">
+                <div id="contactanos" class="contactanos">
+                    <p><strong>Dirección:</strong> Calle 14 #22, Colina Norte.</p>
+                    <a href="tel:+573213644258">Llámanos: +57 321 364 4258</a>
+                    <a href="mailto:contacto@quetzalandino.co">mailto:contacto@quetzalandino.co</a>
+                </div>
+                <div id="horarios" class="horarios">
+                    <h3>Horarios de atencion:</h3>
+                    <p><strong>Lunes a Jueves:</strong> 12:00 PM a 10:00 PM</p>
+                    <p><strong>Viernes y Sábado:</strong> 12:00 PM a 11:30 PM</p>
+                    <p><strong>Domingos:</strong> 12:00 PM a 8:00 PM</p>
+
+                </div>
+                <div id="redes" class="redes">
+                    <a href="https://www.instagram.com/QuetzalAndinoRestaurante" target="_blank">Instagram</a>
+                    <a href="https://www.facebook.com/QuetzalAndino" target="_blank"><strong>Facebook:</strong> /QuetzalAndino</a>
+                </div>
+                
+            </div>
+            <div id="legal" class="legal">
+                    <p><strong>Copyright:</strong> © 2026 Quetzal Andino - Cocina Colombiana Moderna. Todos los derechos reservados.</p>
+                    <p><strong>Aviso:</strong> Hecho con amor por la montaña</p>
+                </div>
+        </footer>
+
+    </div>
+    <div  id="overlay" class="overlay"></div>
+    <script src="quetzal.js"></script>
+
+</body>
+</html>
