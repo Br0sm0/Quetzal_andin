@@ -448,6 +448,10 @@ body{
     color: black;
     cursor:pointer;
 }
+.box_buttons{
+    display: flex;
+    flex-direction: row;gap: 20px;
+}
 #nombre{
     padding: 10px;
     border-radius: 10px;
@@ -569,9 +573,18 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    
-
 }
+
+.animar{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 0.6s ease, opacity 0,6s ease;
+}
+.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 
 
